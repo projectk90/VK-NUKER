@@ -1,6 +1,5 @@
 const { Client, GatewayIntentBits } = require("discord.js");
 
-// Create a new client instance with required intents
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -8,7 +7,6 @@ const client = new Client({
         GatewayIntentBits.MessageContent,
     ],
 });
-// When the client is ready, run this code
 function blockingWait(ms) {
   const start = Date.now();
   while (Date.now() - start < ms) {
@@ -30,7 +28,7 @@ $$ |   $$ |$$ |$$  /       $$$$\\ $$ |$$ |  $$ |$$ |$$  / $$ |      $$ |  $$ |
 console.log(`ADD THE BOT TO A NEW SERVER TO NUKE IT !`)
 
 
-const BOT_TOKEN = "YOUR_BOT_TOKEN"; // Don't expose your token publicly!
+const BOT_TOKEN = "YOUR_BOT_TOKEN"; 
 
 const channelnum = 300; // Default number of new channels
 const customMessage = `@everyone NUKED BY LYKS
